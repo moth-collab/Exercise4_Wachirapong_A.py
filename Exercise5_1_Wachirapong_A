@@ -1,0 +1,6 @@
+No1 = 53
+No2 = 15
+print((No1),"+",(No2),"=" ,No1+No2)
+print((No1),"-",(No2),"=" , No1-No2)
+print((No1),"*",(No2),"=" , No1*No2)
+print((No1),"/",(No2),"=" , No1/No2)
