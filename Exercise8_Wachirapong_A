@@ -1,0 +1,37 @@
+USERNAME = "user123"
+PASSWORD = "password123"
+
+PRODUCTS = {
+    "A": {"name": "กาแฟดำ", "price": 45.00},
+    "B": {"name": "ชาเขียว", "price": 50.00},
+    "C": {"name": "โกโก้เย็น", "price": 60.00}
+}
+
+username = input("กรุณาใส่ Username: ")
+password = input("กรุณาใส่ Password: ")
+
+if username == USERNAME and password == PASSWORD:
+    print("\n✅ ล็อกอินสำเร็จ ยินดีต้อนรับ!")
+
+
+    print("\n===== รายการสินค้า =====")
+    print("รหัส | ชื่อสินค้า | ราคา")
+    print("------------------------")
+    for code, info in PRODUCTS.items():
+        print(f" {code}  | {info['name']} | {info['price']:.2f} บาท")
+    print("------------------------")
+
+
+    total_all = 0
+    order_detail = []
+
+    print("\n======= ใบเสร็จรับเงิน =======")
+    for name, qty, unit_price, total in order_detail:
+        print(f"{name} x {qty} ({unit_price:.2f}/ชิ้น) = {total:.2f} บาท")
+
+    print("--------------------------------")
+    print(f"💰 ยอดรวมทั้งหมด: {total_all:.2f} บาท")
+    print("ขอบคุณที่อุดหนุนครับ ❤️")
+
+else:
+    print("\n❌ ล็อกอินไม่สำเร็จ! Username หรือ Password ไม่ถูกต้อง")
