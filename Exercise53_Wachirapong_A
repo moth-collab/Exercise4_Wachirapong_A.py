@@ -1,0 +1,6 @@
+def VatCalculate(totalPrice):
+    result = totalPrice + (totalPrice * 7 / 100)
+    return result
+user_input = input("กรุณาระบุราคาสินค้า (บาท): ")
+total_price = float(user_input)
+print("ราคารวมภาษีมูลค่าเพิ่มคือ:", VatCalculate(total_price))
